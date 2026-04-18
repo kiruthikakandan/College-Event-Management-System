@@ -1,0 +1,149 @@
+:root {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+
+  color-scheme: dark;
+
+
+  --background: #0b1020;
+  --surface: #121a2b;
+  --surface-soft: #19233a;
+
+  --text-primary: #e6edf6;
+  --text-secondary: #9fb0c7;
+
+  --primary: #4f46e5;
+  --primary-hover: #7cd1cb;
+  --accent: #22c55e;
+
+  --border-light: #2a3550;
+
+  --radius: 12px;
+  --space: 16px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #020617, var(--background));
+  color: var(--text-primary);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px 20px;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+section {
+  margin-bottom: 40px;
+}
+
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  background: var(--surface-soft);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+
+
+button {
+  border-radius: var(--radius);
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  background: var(--primary);
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Card */
+.card {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  margin-bottom: 20px;
+}
+
+/* Event row spacing */
+.card button {
+  margin-top: 10px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+th {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
